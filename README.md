@@ -1,6 +1,6 @@
 # 🔐 Policy-as-Code CI/CD Governance Platform
 
-## 🚀 Project Summary
+## Project Summary
 
 This is an elite-level, enterprise-grade Policy-as-Code Governance Platform designed to automatically enforce security and compliance across all stages of your CI/CD pipeline. Leveraging **Conftest**, **OPA (Open Policy Agent)**, **GitHub Actions**, and **ArgoCD**, this platform brings centralized governance to code, infrastructure, secrets, and Kubernetes deployments.
 
@@ -11,7 +11,7 @@ This is an elite-level, enterprise-grade Policy-as-Code Governance Platform desi
 
 ---
 
-## 📁 Directory Structure (Azure)
+## 📁 Directory Structure
 
 ```bash
 policy-as-code-enterprise-azure/
@@ -40,7 +40,7 @@ policy-as-code-enterprise-azure/
 
 # 📌 Project Phases
 
-## 📦 Phase 1: Architecture & Requirements
+## 📦 Architecture & Requirements
 
 ### 🔍 Use Cases:
 
@@ -69,7 +69,7 @@ policy-as-code-enterprise-azure/
 
 ---
 
-## 🔐 Phase 2: Policy Framework Setup
+## 🔐 Policy Framework Setup
 
 * Installed OPA CLI + Conftest locally
 * Setup initial policy files in `conftest/policies/`
@@ -77,7 +77,7 @@ policy-as-code-enterprise-azure/
 
 ---
 
-## ✍️ Phase 3: Writing High-Value Rego Policies
+## ✍️ Writing High-Value Rego Policies
 
 ### 🧠 Sample Rego Files:
 
@@ -97,7 +97,7 @@ violation["Disallowed image tag"] {
 
 ---
 
-## 🤖 Phase 4: GitHub Actions + Conftest CI Integration
+## 🤖 GitHub Actions + Conftest CI Integration
 
 ### ✅ `.github/workflows/conftest-lint.yml`
 
@@ -127,7 +127,7 @@ jobs:
 
 ---
 
-## 🚀 Phase 5: GitOps with ArgoCD (Azure AKS)
+## 🚀 GitOps with ArgoCD (Azure AKS)
 
 * Deployed ArgoCD to AKS
 * Synced to GitHub repo to auto-deploy validated manifests
@@ -135,7 +135,7 @@ jobs:
 
 ---
 
-## 🧰 Phase 6: Runtime Enforcement via OPA Gatekeeper
+## 🧰 Runtime Enforcement via OPA Gatekeeper
 
 ### 🛡️ Enforced Rules:
 
@@ -156,7 +156,7 @@ violation["Don't use :latest"] {
 
 ---
 
-## 📊 Phase 7: Auditing & Dashboard
+## 📊 Auditing & Dashboard
 
 * Enabled Gatekeeper audit controller
 * Exported violation logs → `logs/sample-violation.md`
@@ -168,7 +168,7 @@ violation["Don't use :latest"] {
 
 ---
 
-## 🧪 Phase 8: Real-World Violations + Fixes
+## 🧪 Real-World Violations + Fixes
 
 * Applied `bad-deployment.yaml` → Rejected by CI & K8s
 * Fixed version → `good-deployment.yaml` → Deployed successfully
@@ -177,7 +177,7 @@ violation["Don't use :latest"] {
 
 ---
 
-## 🌍 Phase 9: Bonus — Multi-Repo & Multi-Env Governance
+## 🌍 Bonus — Multi-Repo & Multi-Env Governance
 
 ### Examples:
 
