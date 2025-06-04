@@ -8,12 +8,25 @@ This repository demonstrates automated policy enforcement in a GitOps + CI/CD pi
 - ✅ Enterprise target: Azure AKS + GitHub pipelines
 
 ## Structure
-policies/
-│
-├── kubernetes/ → Rego rules for K8s manifests
-├── github/ → Rego rules for GitHub workflows
-├── terraform/ → Rego rules for IaC validation
-└── common/ → Shared policy helpers
+policy-as-code-enterprise-azure/
+├── policies/
+│   ├── github/
+│   │   ├── deny-unapproved-actions.rego
+│   │   └── block-secrets-in-workflows.rego
+│   ├── kubernetes/
+│   │   ├── disallow-latest-tag.rego
+│   │   ├── restrict-container-registry.rego
+│   │   └── enforce-labels.rego
+│   ├── terraform/
+│   │   ├── enforce-approved-regions.rego
+│   │   └── deny-public-s3-buckets.rego
+│   └── common/
+│       └── helpers.rego
+├── test-data/
+│   ├── sample-deployment.yaml
+│   ├── bad-github-workflow.yml
+│   └── insecure-terraform.tf
+
 
 
 ## CI/CD Integration
