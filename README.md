@@ -22,4 +22,5 @@ On every push or PR, GitHub Actions:
 - Runs Conftest
 - Applies Rego policies to test-data or repo files
 - Blocks the pipeline if any policy violations are found
-$ conftest test test-data/sample-deployment.yaml --policy policies/
+
+## $ conftest test test-data/sample-deployment.yaml --policy policies/
